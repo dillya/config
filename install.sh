@@ -11,6 +11,25 @@ CFG_FILES=".vimrc
 .Xresources
 .profile"
 
+# Check args
+if [ $# -ge 1 ]; then
+	if [ "$1" = "restore" ]; then
+		echo "Restore saved configuration..."
+		for i in $CFG_FILES; do
+			echo "   Restore $i"
+			rm $HOME/$i 2>/dev/null
+			mv $CFG_BACK/$i $HOME/ 2>/dev/null
+		done
+		echo "   Remove '$CFG_BACK'"
+		rm -r $CFG_BACK
+		echo "Restoration done!"
+		exit 0
+	else
+		echo "Usage: $0 [restore]"
+		exit 1
+	fi
+fi
+
 # Install vim-pathogen
 if ! dpkg -s vim-pathogen >/dev/null 2>&1; then
 	echo "Vim Pathogen plugin is needed: installing it..."
