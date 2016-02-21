@@ -28,6 +28,10 @@ for i in $CFG_FILES; do
 
 	# Move only if file exists
 	if [ -e $HOME/$i ]; then
+		# Remove file before moving
+		if [ -e $CFG_BACK/$i ]; then
+			rm -r $CFG_BACK/$i
+		fi
 		mv $HOME/$i $CFG_BACK/
 	fi
 done
