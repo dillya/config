@@ -4,6 +4,9 @@ execute pathogen#infect()
 " Set to 256 colors
 set t_Co=256
 
+" Display status bar at launch
+set laststatus=2
+
 " Presentation
 "  - Enable color syntax
 "  - Enable line number
