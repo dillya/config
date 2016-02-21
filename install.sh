@@ -10,6 +10,13 @@ CFG_FILES=".vimrc
 .Xresources
 .profile"
 
+# Install vim-pathogen
+if ! dpkg -s vim-pathogen >/dev/null 2>&1; then
+	echo "Vim Pathogen plugin is needed: installing it..."
+	sudo apt-get -y install vim-pathogen
+	echo "   Done"
+fi
+
 # Save config files before
 echo "Save current configuration in '$CFG_BACK'..."
 if [ ! -e $CFG_BACK ]; then
