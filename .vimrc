@@ -1,6 +1,9 @@
 " Plugin manager
 execute pathogen#infect()
 
+" Set to 256 colors
+set t_Co=256
+
 " Presentation
 "  - Enable color syntax
 "  - Enable line number
