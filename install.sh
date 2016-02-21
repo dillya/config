@@ -6,6 +6,7 @@ CFG_BACK=$HOME/.config_backup
 
 # List of files/directories to install
 CFG_FILES=".vimrc
+.vim
 .i3
 .Xresources
 .profile"
@@ -37,6 +38,9 @@ for i in $CFG_FILES; do
 	echo "   Install $i"
 	ln -s $CFG_DIR/$i $HOME/$i
 done
+
+# Refresh Pathogen help
+vim +Helptags +qall
 
 # Done
 echo "Installation done!"
