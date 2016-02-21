@@ -29,15 +29,20 @@ if [ ! -e $CFG_BACK ]; then
 	mkdir $CFG_BACK
 fi
 for i in $CFG_FILES; do
-	echo "   Save $i"
+	echo -n "   Save $i ("
 
 	# Move only if file exists
 	if [ -e $HOME/$i ]; then
-		# Remove file before moving
+		# Remove file if already saved
 		if [ -e $CFG_BACK/$i ]; then
-			rm -r $CFG_BACK/$i
+			rm -r $HOME/$i
+			echo "already saved)"
+		else
+			mv $HOME/$i $CFG_BACK/
+			echo "saved)"
 		fi
-		mv $HOME/$i $CFG_BACK/
+	else
+		echo "not present)"
 	fi
 done
 
