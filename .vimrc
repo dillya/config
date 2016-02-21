@@ -1,12 +1,25 @@
+" Plugin manager
 execute pathogen#infect()
+
+" Presentation
+"  - Enable color syntax
+"  - Enable line number
 syntax on
+set number
 
-"set background=dark
-set t_Co=256 " 256 colors in terminal
+" Search
+"  - Enable highlighting search
+"  - Ignore case when search
+set hlsearch
+set ignorecase
 
+" Add tabs and trailing spaces
 set list
 set listchars=tab:>-,trail:- 
+
+" Set a column bar to 80 characters
 set colorcolumn=80
-let &colorcolumn=join(range(81,999),",")
-highlight ColorColumn ctermbg=0
-"highlight SpecialKey term=standout ctermbg=darkgrey guibg=darkgrey
+highlight ColorColumn ctermbg=darkgrey
+
+" Extend column bar to 999 characters after
+"let &colorcolumn=join(range(81,999),",")
