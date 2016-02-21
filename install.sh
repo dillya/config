@@ -18,6 +18,11 @@ if ! dpkg -s vim-pathogen >/dev/null 2>&1; then
 	echo "   Done"
 fi
 
+# Init and update submodules
+echo "Init and Update git submodules..."
+git -C $CFG_DIR submodule init
+git -C $CFG_DIR submodule update
+
 # Save config files before
 echo "Save current configuration in '$CFG_BACK'..."
 if [ ! -e $CFG_BACK ]; then
