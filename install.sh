@@ -37,6 +37,13 @@ if ! dpkg -s vim-pathogen >/dev/null 2>&1; then
 	echo "   Done"
 fi
 
+# Install vim-fugitive
+if ! dpkg -s vim-fugitive >/dev/null 2>&1; then
+	echo "Installing Vim Fugitive plugin..."
+	sudo apt-get -y install vim-fugitive
+	echo "   Done"
+fi
+
 # Init and update submodules
 echo "Init and Update git submodules..."
 git -C $CFG_DIR submodule init
