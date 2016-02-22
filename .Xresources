@@ -1,5 +1,8 @@
 ! .Xresources
 
+! Use a Powerline Font
+*faceName: DejaVu Sans Mono for Powerline:size=10
+
 ! Sselection
 !  - Select a complete word (include '/', '.', ',', ...)
 XTerm*charClass: 0-32:1,33-126:2,127-160:3,161-255:2
