@@ -75,6 +75,10 @@ done
 # Refresh Pathogen help
 vim +Helptags +qall
 
+# Install powerline fonts
+echo "Install powerline fonts..."
+fonts/install.sh
+
 # Done
 echo "Installation done!"
 
