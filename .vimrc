@@ -29,3 +29,12 @@ highlight ColorColumn ctermbg=darkgrey
 
 " Extend column bar to 999 characters after
 "let &colorcolumn=join(range(81,999),",")
+
+" Customize airline
+"  - Enable smarter tab line
+"  - Disable whispace checking
+"  - Enable powerline fonts
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#whitespace#enabled = 0
+let g:airline_powerline_fonts = 1
+
