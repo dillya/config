@@ -1,6 +1,9 @@
 " Plugin manager
 execute pathogen#infect()
 
+" Enable mouse
+set mouse=a
+
 " Set to 256 colors
 set t_Co=256
 
