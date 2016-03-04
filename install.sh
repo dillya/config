@@ -44,6 +44,13 @@ if ! dpkg -s vim-fugitive >/dev/null 2>&1; then
 	echo "   Done"
 fi
 
+# Install exuberant-ctags
+if ! dpkg -s exuberant-ctags >/dev/null 2>&1; then
+	echo "Installing Exuberant CTags for Tagbar plugin..."
+	sudo apt-get -y install exuberant-ctags
+	echo "   Done"
+fi
+
 # Init and update submodules
 echo "Init and Update git submodules..."
 git -C $CFG_DIR submodule init
