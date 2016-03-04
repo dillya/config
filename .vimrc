@@ -41,3 +41,9 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#whitespace#enabled = 0
 let g:airline_powerline_fonts = 1
 
+" Map some functions
+"  - F2: Toggle NERDTree
+"  - F3: Toggle Tagbar
+noremap <F2> :NERDTreeToggle <CR>
+noremap <F3> :TagbarToggle <CR>
+
