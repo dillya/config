@@ -158,3 +158,8 @@ exec --no-startup-id nm-applet
 
 # Add lock screen on Alt+l
 bindsym Mod1+l exec slock
+
+# Add audio controls (Use Pulseaudio)
+bindsym XF86AudioRaiseVolume exec pactl -- set-sink-volume 0 +5%
+bindsym XF86AudioLowerVolume exec pactl -- set-sink-volume 0 -5%
+bindsym XF86AudioMute exec pactl -- set-sink-mute 0 toggle
