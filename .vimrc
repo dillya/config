@@ -16,6 +16,16 @@ set laststatus=2
 syntax on
 set number
 
+" Diff colorscheme
+"  - Use green for Add
+"  - Use red for Delete
+"  - Use green for Change
+"  - Use dark highlight for change part
+highlight DiffAdd    cterm=bold ctermfg=10 ctermbg=236 gui=none guifg=bg guibg=Red
+highlight DiffDelete cterm=bold ctermfg=9  ctermbg=236 gui=none guifg=bg guibg=Red
+highlight DiffChange cterm=bold ctermfg=10 ctermbg=236 gui=none guifg=bg guibg=Red
+highlight DiffText   cterm=bold ctermfg=10 ctermbg=233 gui=none guifg=bg guibg=Red
+
 " Search
 "  - Enable highlighting search
 "  - Ignore case when search
