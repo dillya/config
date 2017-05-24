@@ -7,6 +7,9 @@ set mouse=a
 " Set to 256 colors
 set t_Co=256
 
+" Set background to ligth (dark by default on Stretch)
+set background=light
+
 " Display status bar at launch
 set laststatus=2
 
