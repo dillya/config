@@ -40,4 +40,4 @@ XTerm*charClass: 0-32:1,33-126:2,127-160:3,161-255:2
 *color14: #34e2e2
 *color15: #eeeeec
 
-
+Xcursor.size: 24
