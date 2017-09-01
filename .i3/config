@@ -151,6 +151,7 @@ bindsym $mod+r mode "resize"
 bar {
 #        status_command i3status
         status_command i3blocks
+        tray_output primary
 }
 
 # Network manager applet
