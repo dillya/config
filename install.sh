@@ -8,6 +8,7 @@ CFG_BACK=$HOME/.config_backup
 CFG_FILES=".vimrc
 .vim
 .i3
+.config/i3
 .Xresources
 .profile"
 
